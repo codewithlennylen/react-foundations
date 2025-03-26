@@ -24,9 +24,18 @@
             return <h1>Hello, World!</h1>;
         }
 
+        function HomePage(){
+            return (
+                <div>
+                    {/* nested component */}
+                    <Header/>
+                </div>
+            );
+        }
+
         const root = document.getElementById('root');
         const reactRoot = ReactDOM.createRoot(root);
-        reactRoot.render(<Header/>);
+        reactRoot.render(<HomePage/>);
     </script>
 
 
