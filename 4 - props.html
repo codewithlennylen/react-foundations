@@ -26,11 +26,19 @@
         }
 
         function HomePage(){
+
+            const names = ['Ada', 'Grace', 'Margaret'];
+
             return (
                 <div>
                     {/* nested component */}
                     <Header/>
                     <Header title="Reacting"/>
+                    <ul>
+                        {names.map((name) => (
+                            <li key={name}>{name}</li>
+                        ))}
+                    </ul>
                 </div>
             );
         }
