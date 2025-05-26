@@ -20,9 +20,9 @@
 
     <script type="text/jsx">
 
-        function Header(props){
-            console.log(props);
-            return (<h1></h1>)
+        function Header({title = "Hello, World!"}){
+            console.log(title);
+            return (<h1>Simon says, {title}</h1>)
         }
 
         function HomePage(){
