@@ -1,43 +1,26 @@
-import { useState } from 'react';
+import LikeButton from "./like-button";
 
-
-
-function Header({title = "Hello, World!"}){
-    console.log(title);
-    return (<h1>Simon says, {title}</h1>)
+function Header({ title = "Hello, World!" }) {
+  console.log(title);
+  return <h1>Simon says, {title}</h1>;
 }
 
-function HomePage(){
+function HomePageContent() {}
 
-    const names = ['Ada', 'Grace', 'Margaret'];
+export default function HomePage() {
+  const names = ["Ada", "Grace", "Margaret"];
 
-    const [likes, setLikes] = useState(0);
-
-    function handleClick(){
-        console.log("Increment like count")
-        setLikes(likes + 1)
-
-
-    }
-
-    return (
-        <div>
-            {/* nested component */}
-            <Header/>
-            <Header title="Reacting"/>
-            <ul>
-                {names.map((name) => (
-                    <li key={name}>{name}</li>
-                ))}
-            </ul>
-            <button onClick={handleClick}>Like ({likes})</button>
-        </div>
-    );
+  return (
+    <div>
+      {/* nested component */}
+      <Header />
+      <Header title="Reacting" />
+      <ul>
+        {names.map((name) => (
+          <li key={name}>{name}</li>
+        ))}
+      </ul>
+      <LikeButton />
+    </div>
+  );
 }
-
-export default function HomePage(){
-    
-}
-
-
-

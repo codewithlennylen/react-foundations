@@ -20,3 +20,18 @@ npm -v # Should print "10.9.2".
 
 - [Nodejs Install Instructions](https://nodejs.org/en/download)
 
+2. Install dependencies.
+
+- [Read more about these](https://nextjs.org/learn/react-foundations/installation) 
+- Create a `package.json` file in the root directory:
+
+```bash
+{}
+```
+
+- Run the folowing command in the terminal:
+
+```bash
+npm install react@latest react-dom@latest next@latest
+```
+
